@@ -1,0 +1,92 @@
+body {
+  background: #F5F5F5;
+  box-sizing: border-box;
+  padding: 20px;  
+}
+
+#wrapper {
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  line-height: 20px;
+  justify-content: center;
+}
+
+#wrapper img{
+  border-radius: 6px;
+  width: 90%;
+}
+
+#btn {
+  background-color: rgb(236, 136, 153);
+  border-radius: 6px;
+  height: 50px;
+  width: 60%;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding-top: 5px;
+  align-items: stretch;
+  margin: auto;
+}
+
+.result{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+}
+
+#rci {
+  z-index: 1000;
+  width: 90%;
+  margin: auto;
+}
+
+#rci img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+#output {
+  background: #fff;
+  border-radius: 10px;
+  color: #333;
+  height: 15vh;
+  line-height: 5vh;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+  width: 90%;
+  z-index: 1000;
+  margin: auto;
+}
+
+#overlay {
+  background: rgba(0, 0, 0, .7);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#rci,
+#output,
+#overlay {
+  opacity: 0;
+  transition: all 0.5s;
+  visibility: hidden;
+}
+
+#rci.fadein,
+#output.fadein,
+#overlay.fadein {
+  opacity: 1;
+  visibility: visible;
+}
